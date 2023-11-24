@@ -1,5 +1,11 @@
 import React from 'react'
 import { ContactContainer } from './ContactStyled';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa6";
 
 import fotoContacto from '/src/assets/VM1RR0aKaPa38kv6ffcs1687062516.webp';
 
@@ -26,10 +32,21 @@ export const Contact = () => {
         </figure>
 
         <section className="secRedes">
-          <div>face</div>
-          <div>inst</div>
-          <div>tw</div>
-          <div>in</div>
+          <div>
+            {" "}
+            <FaFacebookF />
+          </div>
+          <div>
+            <FaInstagram />
+          </div>
+          <div>
+            {" "}
+            <FaTwitter />
+          </div>
+          <div>
+            {" "}
+            <FaLinkedin />
+          </div>
         </section>
       </div>
 

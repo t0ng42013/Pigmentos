@@ -5,6 +5,8 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding:  1.5rem .75rem;
+  position: relative;
+  z-index: 50;
 
   h2 {
     color: white;
