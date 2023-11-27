@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+export const HamburgerContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  @media (min-width: 768px){
+    display: none;
+  }
+`;
+
 export const BurgerBtn = styled.div`
   .three {
     -webkit-box-sizing: border-box;

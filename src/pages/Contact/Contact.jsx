@@ -1,37 +1,39 @@
 import React from 'react'
-import { ContactContainer } from './ContactStyled';
+import { ContactContainer, FormContainer, InfoBody, InfoContainer, InfoFigure, RedesContainer,Form } from './ContactStyled';
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa6";
+import { FaMailBulk } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
 
 import fotoContacto from '/src/assets/VM1RR0aKaPa38kv6ffcs1687062516.webp';
 
 export const Contact = () => {
   return (
     <ContactContainer>
-      <div className="info">
-        <h2>Contac us</h2>
-        <p>Fill out the form and we'll get back to you within 24 hours.</p>
-        <span></span>
-        <div>
+      <InfoContainer>
+        <h2>Contáctenos</h2>
+        <p>Complete el formulario y nos comunicaremos con usted dentro de las 24 horas </p>
+        <hr className="underLine" />
+        <InfoBody>
           <div>
-            <i></i>
-            <span>uistorofficial@gmail.com</span>
+            <FaMailBulk />
+            <span>Pigmentos@gmail.com</span>
           </div>
           <div>
-            <i></i>
-            <span>+8801778561222</span>
+            <FaPhone />
+            <span>+11122233344</span>
           </div>
-        </div>
+        </InfoBody>
 
-        <figure>
-          <img src={fotoContacto} alt="" />
-        </figure>
+        <InfoFigure>
+          <img src={fotoContacto} alt="img" />
+        </InfoFigure>
 
-        <section className="secRedes">
+        <RedesContainer>
           <div>
             {" "}
             <FaFacebookF />
@@ -47,23 +49,22 @@ export const Contact = () => {
             {" "}
             <FaLinkedin />
           </div>
-        </section>
-      </div>
+        </RedesContainer>
+      </InfoContainer>
 
-      <div className="form">
-        <div className="formCon rounded-[10px]">
-          <p className="text-lg font-medium">What are you looking for?</p>
-          <form className="space-y-5 mt-[30px]" action="">
+      <FormContainer>
+        <div className="formBody">
+          <p >¿ Que estás buscando ?</p>
+          <Form action="">
             <div>
-              <p className="text-sm font-medium">Full Name</p>
+              <p >Full Name</p>
               <input
-                className="w-full focus:outline-none border border-[#4D4D4D33]/20 rounded-lg bg-transparent mt-[10px]"
                 type="text"
                 placeholder="Full Name"
               />
             </div>
             <div>
-              <p className="text-sm font-medium">Email</p>
+              <p >Email</p>
               <input
                 className="w-full focus:outline-none border border-[#4D4D4D33]/20 rounded-lg bg-transparent mt-[10px]"
                 type="email"
@@ -71,9 +72,8 @@ export const Contact = () => {
               />
             </div>
             <div>
-              <p className="text-sm font-medium">Message</p>
+              <p >Message</p>
               <textarea
-                className="w-full focus:outline-none border border-[#4D4D4D33]/20 rounded-lg bg-transparent mt-[10px] resize-none"
                 name=""
                 id=""
                 cols="30"
@@ -82,14 +82,13 @@ export const Contact = () => {
               ></textarea>
             </div>
             <button
-              type="submit"
-              className="bg-[#026CFA] py-4 text-sm font-semibold text-white w-full rounded-lg"
+              // type="submit"
             >
               Submit
             </button>
-          </form>
+          </Form>
         </div>
-      </div>
+      </FormContainer>
     </ContactContainer>
   );
 }
