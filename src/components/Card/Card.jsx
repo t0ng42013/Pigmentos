@@ -1,7 +1,7 @@
 import React from 'react'
 import { CardBody, CardBodyParagraph, CardBodyTitle, CardContainer, CardType } from './CardStyled'
 
-// import imgCard from "/src/assets/tesis.jpg";
+import imgCard from "/src/assets/tesis.jpg";
 
 export const Card = () => {
   return (
