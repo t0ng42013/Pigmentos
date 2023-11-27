@@ -1,13 +1,13 @@
 import React from 'react'
 import { CardBody, CardBodyParagraph, CardBodyTitle, CardContainer, CardType } from './CardStyled'
 
-
+import fotoContacto2 from "/src/assets/VM1RR0aKaPa38kv6ffcs1687062516.webp";
 
 export const Card = () => {
   return (
     <CardContainer>
       <figure>
-        <img src="src/assets/tesis.jpg" alt="fotocard" />
+        <img src={fotoContacto2} alt="fotocar2" />
       </figure>
       <CardType>
         <div>
