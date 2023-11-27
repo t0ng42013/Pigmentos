@@ -1,13 +1,13 @@
 import React from 'react'
 import { CardBody, CardBodyParagraph, CardBodyTitle, CardContainer, CardType } from './CardStyled'
 
-import imgCard from "/src/assets/tesis.jpg";
+
 
 export const Card = () => {
   return (
     <CardContainer>
       <figure>
-        <img src={imgCard} alt="fotocard" />
+        <img src="src/assets/tesis.jpg" alt="fotocard" />
       </figure>
       <CardType>
         <div>
