@@ -22,9 +22,7 @@ export const Resources = () => {
             </ResourcesButtons>
           </ResoursesOptions>
           <CardsContainer>
-            <div>
-              <Card></Card>
-            </div>
+            <Card></Card>
           </CardsContainer>
         </div>
         <ViewMore>

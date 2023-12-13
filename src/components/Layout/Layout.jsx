@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { LayoutContainer } from './LayoutStyled'
+import { MenuContext } from '../../context/MenuContext';
 
 export const Layout = ({ children }) => {
-  return (
-      <LayoutContainer>{children}</LayoutContainer>
-  )
+   const { handleClose } = useContext(MenuContext);
+  return <LayoutContainer onClick={handleClose}>{children}</LayoutContainer>;
 }

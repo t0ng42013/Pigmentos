@@ -1,29 +1,24 @@
-import { FaCartArrowDown } from "react-icons/fa";
-import { Cart } from "../Navbar/StyledNav";
+
 import { BurgerBtn, HamburgerContainer } from "./burger";
 
- 
-export const Hamburger = ({menu, handleClick }) => {
+
+import { FaAlignJustify } from "react-icons/fa";
+import { MdClose } from "react-icons/md";
+import { CartIcon } from "../Cart/CartIcon";
+import { useContext } from "react";
+import { MenuContext } from "../../context/MenuContext";
+
+export const Hamburger = () => {
+  
+  const { isMenuOpen, toggleMenu } = useContext(MenuContext);
+
   return (
     <HamburgerContainer>
-    <BurgerBtn onClick={handleClick}>
-      <div className="three col">
-        <div
-          className={`${menu ? "hamburger is-active" : "hamburger"}`}
-          id="hamburger-1"
-        >
-          <span className="line"></span>
-          <span className="line"></span>
-          <span className="line"></span>
-        </div>
-      </div>
-      <div className={`${menu ? "bgOverlay is-active" : "hamburger"}`}></div>
-    </BurgerBtn>
-     <Cart>
-              <FaCartArrowDown />
-              <span>3</span>
-            </Cart>
+      <BurgerBtn onClick={toggleMenu}>
+        {!isMenuOpen ? <FaAlignJustify /> : <MdClose />}
+      </BurgerBtn>
+
+      <CartIcon />
     </HamburgerContainer>
-    
   );
 };

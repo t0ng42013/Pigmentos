@@ -1,33 +1,26 @@
-import { useState } from "react"
+
 import { Hamburger } from "../hamburger/Hamburger"
-import { Cart, MenuDesktop, MenuDesktopLinks, MenuDesktopLinksBtns, MenuMobile, MenuMobileBtns, Nav } from "./StyledNav"
-import { FaCartArrowDown } from "react-icons/fa";
+import {  MenuDesktop, MenuDesktopLinks, MenuDesktopLinksBtns, MenuMobile, MenuMobileBtns, Nav } from "./StyledNav"
+
 
 
 import  logo  from "/src/assets/logoPig2.png"
 import { Link } from "react-router-dom"
-
+import { useContext } from "react";
+import { MenuContext } from "../../context/MenuContext";
+import { CartMenu } from "../Cart/CartMenu";
+import { CartIcon } from "../Cart/CartIcon";
 
 export const Navbar = () => {
-    const [menu, setMenu] = useState(false);
+  
+  const { isMenuOpen, isCartOpen } = useContext(MenuContext);
 
-    const handleClick = () => {
-        setMenu(!menu)
-        console.log(menu)
-    }
-    
   return (
     <header>
       <Nav>
         <Link to="/">
           <img src={logo} alt="logo" />
         </Link>
-        {/* <div className={`links ${menu ? "active" : ""}`}>
-          <Link to={"/"}> Home </Link>
-          <Link to={"/products"}> Shop </Link>
-          <Link to={"/about"}> About </Link>
-          <Link to={"/contact"}> Contact </Link>
-        </div> */}
         <MenuDesktop>
           <MenuDesktopLinks>
             <li>
@@ -46,35 +39,43 @@ export const Navbar = () => {
               Contáctanos
             </Link>
 
-            <Cart>
-              <FaCartArrowDown />
-              <span>3</span>
-            </Cart>
+            <CartIcon />
+
             <Link to={"/login"} className="btn">
               Acceso
             </Link>
           </MenuDesktopLinksBtns>
         </MenuDesktop>
-        <Hamburger menu={menu} handleClick={handleClick} />
+
+        <Hamburger />
       </Nav>
 
-      <MenuMobile>
+      <MenuMobile className={`${isMenuOpen ? "active" : ""}`}>
         <ul>
           <li>
-            <Link to={"/"}>Home</Link>
+            <Link onClick={() => toggleMenu()} to={"/"}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to={"/products"}>Shop</Link>
+            <Link onClick={() => toggleMenu()} to={"/products"}>
+              Shop
+            </Link>
           </li>
           <li>
-            <Link to={"/about"}> About</Link>
+            <Link onClick={() => toggleMenu()} to={"/about"}>
+              {" "}
+              About
+            </Link>
           </li>
           <li>
-            <Link to={"/contact"}>Contact</Link>
+            <Link onClick={() => toggleMenu()} to={"/contact"}>
+              Contact
+            </Link>
           </li>
         </ul>
 
-        <MenuMobileBtns menu={menu}>
+        <MenuMobileBtns>
           <Link to={"/contact"} className="btn">
             Contáctanos
           </Link>
@@ -83,6 +84,8 @@ export const Navbar = () => {
           </Link>
         </MenuMobileBtns>
       </MenuMobile>
+
+      <CartMenu isCartOpen={isCartOpen} />
     </header>
   );
 }

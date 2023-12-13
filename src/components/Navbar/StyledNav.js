@@ -76,7 +76,12 @@ export const Cart = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 5px;
 
+  &:hover {
+    background-color: #279fff;
+  }
   svg{
     margin: auto;
   }
@@ -97,20 +102,17 @@ export const Cart = styled.div`
 `;
 
 export const MenuMobile = styled.div`
-  background-color: #104110;
+  background-color: #000000;
   width: 100%;
   height: 100vh;
   position: absolute;
-  left: -200vw;
+  left: -100vw;
   top: 0;
-  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 45px;
   z-index: 10;
-  border: solid red;
-  transition: all 3s ease-in;
 
   ul {
     display: flex;
@@ -125,14 +127,19 @@ export const MenuMobile = styled.div`
     }
   }
 
-  .active {
+  &.active {
     position: relative;
-    transform: translateX(200vw);
-
-    top: 0;
+    transform: translateX(100vw);
+    top: 0px;
     display: flex;
-    transition: all 3s ease-in;
+    transition: all .4s ease-in;
+    
+    @media (min-width: 768px) {
+      display: none;
+      
+    }
   }
+
 `;
 
 export const MenuMobileBtns = styled.div`
