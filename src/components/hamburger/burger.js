@@ -5,6 +5,7 @@ export const HamburgerContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
+  overflow: visible;
   cursor: pointer;
 
   @media (min-width: 768px){

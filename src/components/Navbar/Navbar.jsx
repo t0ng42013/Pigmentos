@@ -16,11 +16,12 @@ export const Navbar = () => {
   const { isMenuOpen, isCartOpen, toggleMenu } = useContext(MenuContext);
 
   return (
-    <header>
+    <header className="header">
       <Nav>
         <Link to="/">
           <img src={logo} alt="logo" />
         </Link>
+        
         <MenuDesktop>
           <MenuDesktopLinks>
             <li>

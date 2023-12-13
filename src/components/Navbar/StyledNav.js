@@ -1,14 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Nav = styled.nav`  
+export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:  1.5rem .75rem;
+  padding: 1.5rem 0.75rem;
   position: relative;
   z-index: 50;
+  overflow: visible;
 
- a{
+  a {
     color: white;
     font-weight: bold;
     display: flex;
@@ -24,7 +25,6 @@ export const Nav = styled.nav`
     a {
     }
   }
-
 `;
 export const MenuDesktop = styled.div`
   margin: auto;
@@ -32,27 +32,26 @@ export const MenuDesktop = styled.div`
   display: none;
   align-items: center;
   justify-content: space-between;
+  overflow: visible;
+ 
 
   @media (min-width: 768px) {
-
-      display: flex;
-    
+    display: flex;
   }
 `;
-
 
 export const MenuDesktopLinks = styled.ul`
   display: flex;
   align-items: center;
   gap: 1;
   z-index: 10;
-    li {
-       padding: 0.1rem 1.25rem;
-       a {
-         color: #fafafa;
-        font-size: 1.1rem;
-        }
+  li {
+    padding: 0.1rem 1.25rem;
+    a {
+      color: #fafafa;
+      font-size: 1.1rem;
     }
+  }
 `;
 
 export const MenuDesktopLinksBtns = styled.div`
@@ -71,7 +70,9 @@ export const MenuDesktopLinksBtns = styled.div`
 `;
 
 export const Cart = styled.div`
+  overflow: visible;
   position: relative;
+  margin-right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,22 +83,28 @@ export const Cart = styled.div`
   &:hover {
     background-color: #279fff;
   }
-  svg{
+  svg {
     margin: auto;
+    width: 30px;
+    height: 30px;
   }
-  span {   
+  span {
     width: 20px;
     height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size : 1rem;
+    font-size: 1rem;
     border-radius: 50%;
     text-align: center;
     background-color: #279fff;
     position: absolute;
     right: -10px;
-    top: -10px;    
+    top: -10px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 100px;
   }
 `;
 
@@ -132,14 +139,12 @@ export const MenuMobile = styled.div`
     transform: translateX(100vw);
     top: 0px;
     display: flex;
-    transition: all .4s ease-in;
-    
+    transition: all 0.4s ease-in;
+
     @media (min-width: 768px) {
       display: none;
-      
     }
   }
-
 `;
 
 export const MenuMobileBtns = styled.div`
