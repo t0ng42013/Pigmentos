@@ -16,7 +16,7 @@ export const Card = () => {
       {products.map((product) => (
         <CardContainer key={product.id}>
           <figure>
-            <img src={`/src/${product.image}`} alt="foto" />
+            <img src={`/${product.image}`} alt="foto" />
           </figure>
           <CardType>
             <div>
