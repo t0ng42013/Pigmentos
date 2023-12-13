@@ -58,6 +58,7 @@ export const MenuDesktopLinksBtns = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  overflow: visible;
 
   button {
     border-radius: 999px;

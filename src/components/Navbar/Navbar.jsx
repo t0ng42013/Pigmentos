@@ -21,7 +21,7 @@ export const Navbar = () => {
         <Link to="/">
           <img src={logo} alt="logo" />
         </Link>
-        
+
         <MenuDesktop>
           <MenuDesktopLinks>
             <li>
@@ -77,10 +77,14 @@ export const Navbar = () => {
         </ul>
 
         <MenuMobileBtns>
-          <Link to={"/contact"} className="btn">
+          <Link onClick={() => toggleMenu()} to={"/contact"} className="btn">
             Contáctanos
           </Link>
-          <Link to={"/login"} className="btn btnStart">
+          <Link
+            onClick={() => toggleMenu()}
+            to={"/login"}
+            className="btn btnStart"
+          >
             Acceso
           </Link>
         </MenuMobileBtns>
