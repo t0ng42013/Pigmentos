@@ -6,6 +6,7 @@ import {
   CardContainer,
   CardType,
 } from "./CardStyled";
+
 import { products } from "../../data/Products";
 
 export const Card = () => {
@@ -15,7 +16,7 @@ export const Card = () => {
       {products.map((product) => (
         <CardContainer key={product.id}>
           <figure>
-            <img src={`/src/${product.image}`} alt="fotocar2" />
+            <img src={`/src/${product.image}`} alt="foto" />
           </figure>
           <CardType>
             <div>
