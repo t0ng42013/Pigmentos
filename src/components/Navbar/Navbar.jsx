@@ -13,7 +13,7 @@ import { CartIcon } from "../Cart/CartIcon";
 
 export const Navbar = () => {
   
-  const { isMenuOpen, isCartOpen } = useContext(MenuContext);
+  const { isMenuOpen, isCartOpen, toggleMenu } = useContext(MenuContext);
 
   return (
     <header>
@@ -79,7 +79,7 @@ export const Navbar = () => {
           <Link to={"/contact"} className="btn">
             Contáctanos
           </Link>
-          <Link to={"/login"} className="btn">
+          <Link to={"/login"} className="btn btnStart">
             Acceso
           </Link>
         </MenuMobileBtns>

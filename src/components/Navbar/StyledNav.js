@@ -149,6 +149,7 @@ export const MenuMobileBtns = styled.div`
   gap: 0.75rem;
   line-height: 2.54rem;
   width: 100%;
+  text-align: center;
 
   .btnStart {
     background: linear-gradient(
