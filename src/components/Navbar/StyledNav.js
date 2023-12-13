@@ -50,7 +50,11 @@ export const MenuDesktopLinks = styled.ul`
     a {
       color: #fafafa;
       font-size: 1.1rem;
+       &:hover{
+      color: gray;
     }
+    }
+   
   }
 `;
 
@@ -67,6 +71,15 @@ export const MenuDesktopLinksBtns = styled.div`
     font-size: 1.2rem;
     cursor: pointer;
     border: 1px solid #2b2b3b;
+
+  }
+  .btnStart {
+  background: linear-gradient(
+    90deg,
+    #279fff 7.81%,
+    #663aff 52.18%,
+    #f54aba 98.44%
+  );
   }
 `;
 
@@ -81,8 +94,8 @@ export const Cart = styled.div`
   cursor: pointer;
   margin-left: 5px;
 
-  &:hover {
-    background-color: #279fff;
+  svg:hover {
+    fill:orange;
   }
   svg {
     margin: auto;
@@ -132,6 +145,9 @@ export const MenuMobile = styled.div`
     line-height: 2.5rem;
     li a {
       color: white;
+      &:hover{
+        color: gray;
+      }
     }
   }
 

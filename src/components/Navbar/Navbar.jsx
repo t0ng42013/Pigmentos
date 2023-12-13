@@ -42,7 +42,7 @@ export const Navbar = () => {
 
             <CartIcon />
 
-            <Link to={"/login"} className="btn">
+            <Link to={"/login"} className="btn btnStart">
               Acceso
             </Link>
           </MenuDesktopLinksBtns>
