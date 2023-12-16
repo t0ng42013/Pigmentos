@@ -11,12 +11,11 @@ import { products } from "../../data/Products";
 
 export const Card = () => {
   return (
-    
     <>
       {products.map((product) => (
         <CardContainer key={product.id}>
           <figure>
-            <img src={`/${product.image}`} alt="foto" />
+            <img src={`/${product.image}`} alt={product.id} />
           </figure>
           <CardType>
             <div>
@@ -36,9 +35,8 @@ export const Card = () => {
               calidad fotográfica 😍🤩
             </CardBodyParagraph>
           </CardBody>
-            </CardContainer>
+        </CardContainer>
       ))}
-      </>
-  
+    </>
   );
 };
