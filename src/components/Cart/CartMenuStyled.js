@@ -1,23 +1,25 @@
 import styled from "styled-components";
 
 export const CartContainer = styled.div`
-  width: 35%;
+  width: 220px;
   height: 100vh;
   margin-left: auto;
   background-color: #222;
-  opacity: 0.9;
+  opacity: 1;
   position: absolute;
   top: 80px;
   right: ${({ isOpen }) =>
     isOpen
       ? "0"
       : "-100%"}; /* Cambia la posición dependiendo del estado */ /* Cambia la posición dependiendo del estado */
-  z-index: 200;
+  z-index: 300;
   display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
   flex-direction: column;
   align-items: center;
   gap: 10px;
-
+@media (min-width: 600px) {
+  width: 400px;
+}
   hr {
     margin-top: 40px;
     margin-bottom: 16px;
@@ -25,7 +27,18 @@ export const CartContainer = styled.div`
   }
 
   ul {
-    width: 100%;;
+    width: 100%;
+    .cartVacio{
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 20px;
+
+      span{
+        display: block;
+        margin: 20px;
+        font-size: 40px;
+      }
+    }
   }
 
   li{
@@ -79,14 +92,19 @@ export const CartItem = styled.li`
 `;
 
 export const CartBtnBuy = styled.button`
-  padding: 8px 32px;
-  margin: 16px 0;
+  padding: 8px 25px;
+  margin: 16px 4px;
   background: gray;
 
-  &:hover{
+  &:hover {
     color: black;
     background: #fff;
-    transition: all .3s;
+    transition: all 0.3s;
   }
 `;
 
+export const CartCleanBtn = styled(CartBtnBuy)`
+  color: orange;
+  background-color: black;
+  font-weight: bold;
+`;

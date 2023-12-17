@@ -8,24 +8,20 @@ import Routes from "./routes/Routes";
 function App() {
   
   return (
-  <>
-  <CartContextProvider>
-      <MenuContextProvider >
-    
-  <Navbar />
+    <>
+      <CartContextProvider>
+        <MenuContextProvider>
+          
+          <Navbar />
 
-      <Layout>
-        <Routes />
-      </Layout>
+          <Layout>
+            <Routes />
+          </Layout>
 
-      <Footer />
-
-  </MenuContextProvider>
-  </CartContextProvider>
-
-
-  </>
-      
+          <Footer />
+        </MenuContextProvider>
+      </CartContextProvider>
+    </>
   );
 }
 

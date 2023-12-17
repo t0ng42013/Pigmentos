@@ -37,6 +37,11 @@ export const CardType = styled.div`
     align-items: center;
     cursor: pointer;
     color: white;
+    transition: transform 0.2s ease-out;
+    &:active {
+      background-color: #6b97ff;
+      transform: translateY(2px);
+    }
   }
 `;
 

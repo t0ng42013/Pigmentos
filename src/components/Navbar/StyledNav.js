@@ -6,7 +6,7 @@ export const Nav = styled.nav`
   align-items: center;
   padding: 1.5rem 0.75rem;
   position: relative;
-  z-index: 50;
+  z-index: 200;
   overflow: visible;
 
   a {
@@ -44,7 +44,7 @@ export const MenuDesktopLinks = styled.ul`
   display: flex;
   align-items: center;
   gap: 1;
-  z-index: 10;
+  z-index: 200;
   li {
     padding: 0.1rem 1.25rem;
     a {
@@ -125,7 +125,7 @@ export const Cart = styled.div`
 export const MenuMobile = styled.div`
   background-color: #000000;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   position: absolute;
   left: -100vw;
   top: 0;
@@ -133,7 +133,7 @@ export const MenuMobile = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 45px;
-  z-index: 10;
+  z-index: 300;
 
   ul {
     display: flex;

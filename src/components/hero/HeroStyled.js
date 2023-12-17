@@ -86,3 +86,26 @@ export const HeroButton = styled.button`
   }
 
 `;
+
+export const ResultSearch = styled.div`
+  padding: 20px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  position: relative;
+ max-height: 150px;
+  overflow-y: scroll;
+  display: ${({search}) => search === ''
+?'none'
+:'block'};
+
+  p {
+    margin-bottom: 10px;
+    padding: 2px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(255, 255, 0, .1);
+      color: azure;
+    }
+  }
+`;

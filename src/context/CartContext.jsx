@@ -19,6 +19,10 @@ const removeFromCart = (itemId) => {
   setCartItems(updatedCart);
 };
 
+const removeAllFromCart = () => {
+  setCartItems([]); // Asigna un array vacío para eliminar todos los elementos del carrito
+};
+
 const getTotalItems = () => {
   return cartItems.reduce((total, item) => total + 1, 0);
 };
@@ -35,6 +39,7 @@ return (
       removeFromCart,
       getTotalItems,
       getSubTotal,
+      removeAllFromCart,
     }}
   >
     {children}

@@ -56,10 +56,13 @@ export const ResourcesButtons = styled.ul`
 
   button {
     color: white;
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 1rem;
     font-weight: 500;
     
+    @media (min-width: 400px){
+font-size: 1.3rem;
+    }
     height: 40px;
     border-radius: 9999px;
     border: 2px solid #3c3c4c;
@@ -78,6 +81,7 @@ export const CardsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   margin-top: 2.5rem;
+  place-items: center;
   gap: 30px;
 
   @media (min-width: 768px) {

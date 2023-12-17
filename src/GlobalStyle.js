@@ -56,4 +56,19 @@ footer{
     margin-right: 2rem;
 
 }
+.overlay {
+  display: none; /* Por defecto, oculto */
+  /* Estilos para el overlay, por ejemplo: */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Color oscuro semitransparente */
+  z-index: 150; /* Asegura que esté por encima de otros elementos */
+}
+
+.overlay.active {
+  display: block; /* Mostrar cuando está activo */
+}
 `;
