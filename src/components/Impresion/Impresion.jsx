@@ -1,7 +1,7 @@
 import React from 'react'
 import { ImpresionContainerStyled } from './ImpresionStyled'
 
-import imgCard from "/src/assets/img4.jpg";
+
 
 export const Impresion = () => {
   return (
@@ -12,7 +12,7 @@ export const Impresion = () => {
         <p>El futuro del diseño está al alcance de tu mano.</p>
 
         <figure>
-          <img src={imgCard} alt="img" />
+          <img src="/assets/img4.jpg" alt="img" />
         </figure>
       </div>
     </ImpresionContainerStyled>

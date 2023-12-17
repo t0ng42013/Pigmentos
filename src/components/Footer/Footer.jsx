@@ -1,8 +1,7 @@
 import React from 'react'
 import { FootContainerRedes, FooterStyles } from './FooterStyled'
 
-import logo from "/src/assets/logoPig2.png";
-import fondofoot from "/src/assets/imgBgBlurBlue.png";
+
 
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
 
@@ -11,7 +10,7 @@ export const Footer = () => {
   return (
     <FooterStyles>
       <a href="/ ">
-        <img src={logo} alt="logo" />
+        <img src="/assets/logoPig2.png" alt="logo" />
       </a>
       <FootContainerRedes>
         <a
@@ -47,12 +46,9 @@ export const Footer = () => {
         </a>
       </FootContainerRedes>
 
-      <p >
-        {" "}
-        COPYRIGHT 2023, Pigmentos{" "}
-      </p>
-      <figure className='footDeco'>
-        <img src={fondofoot} alt="logo" />
+      <p> COPYRIGHT 2023, Pigmentos </p>
+      <figure className="footDeco">
+        <img src="/assets/imgBgBlurBlue.png" alt="logo" />
       </figure>
     </FooterStyles>
   );

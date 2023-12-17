@@ -9,7 +9,7 @@ import {
 import { FaMailBulk } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 
-import fotoContacto from '/src/assets/VM1RR0aKaPa38kv6ffcs1687062516.webp';
+import fotoContacto from '/assets/VM1RR0aKaPa38kv6ffcs1687062516.webp';
 
 export const Contact = () => {
   return (

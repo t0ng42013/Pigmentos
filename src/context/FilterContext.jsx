@@ -29,3 +29,4 @@ export const FilterProvider = ({ children }) => {
     </FilterContext.Provider>
   );
 };
+

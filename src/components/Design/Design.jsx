@@ -1,7 +1,7 @@
 import React from "react";
 import { DesignContainer } from "./DesignStyled";
 
-import imgCard from "/src/assets/img3.jpg";
+
 
 export const Design = () => {
   return (
@@ -13,7 +13,7 @@ export const Design = () => {
           personalízala con nuestro sencillo editor y recíbela en tu puerta.
         </p>
         <figure>
-          <img src={imgCard} alt="img" />
+          <img src="/assets/img3.jpg" alt="img" />
         </figure>
       </div>
     </DesignContainer>

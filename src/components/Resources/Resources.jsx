@@ -8,15 +8,14 @@ export const Resources = () => {
 
  const { filter, updateFilter } = useFilter();
 
- const handleFilterChange = (newFilter) => {
-    console.log("Nuevo filtro:", newFilter);
+ const handleFilterChange = (newFilter) => {    
     updateFilter(newFilter);
  };
-
- const filteredProducts =
-   filter === "todos"
-     ? products
-     : products.filter((product) => product.category === filter);
+ 
+const filteredProducts =
+  filter === "todos"
+    ? products
+    : products.filter((product) => product.category === filter);
 
   return (
     <ResourcesContainer>
@@ -26,31 +25,35 @@ export const Resources = () => {
           <ResoursesOptions>
             <ResourcesButtons>
               <li>
-                <button onClick={() => handleFilterChange("Cuadernos")}>
-                  All
+                <button onClick={() => handleFilterChange("Personalizados")}>
+                  Personalizados
                 </button>
               </li>
               <li>
-                <button onClick={() => handleFilterChange("invitaciones")}>
-                  Free
+                <button onClick={() => handleFilterChange("Papelería")}>
+                  Papelería
                 </button>
               </li>
               <li>
-                <button onClick={() => handleFilterChange("Fotolibros")}>
-                  Pro
+                <button onClick={() => handleFilterChange("Especiales")}>
+                  Especiales
                 </button>
               </li>
             </ResourcesButtons>
           </ResoursesOptions>
           <CardsContainer>
-            {filteredProducts.map((product) => (
-              <Card key={product.id}></Card>
-            ))}
+            {filteredProducts.map((product) => {
+              return <Card key={product.id} product={product} />;
+            })}
           </CardsContainer>
         </div>
-        <ViewMore>
-          <button>View More Designs</button>
-        </ViewMore>
+        {filter !== "todos" && (
+          <ViewMore>
+            <button onClick={() => handleFilterChange("todos")}>
+              View More Designs
+            </button>
+          </ViewMore>
+        )}
       </AllResources>
     </ResourcesContainer>
   );

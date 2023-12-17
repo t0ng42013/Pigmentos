@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import fondo1 from '/src/assets/fotohero1.jpg';
 
 export const HeroContainer = styled.section`
  position: relative;

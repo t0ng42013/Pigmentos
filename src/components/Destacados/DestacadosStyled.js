@@ -54,6 +54,9 @@ export const FeaturedCard = styled.div`
     &:hover > .featuredImg {
       margin-top: -100px;
     }
+    &:hover > div > .featuredSocialLink ul li {
+      bottom: 220px;
+    }
 
     .featuredImg {
       background-color: #fff;
@@ -69,9 +72,13 @@ export const FeaturedCard = styled.div`
       }
     }
   }
+  &:hover > .featuredSocialLink ul li {
+    bottom: 220px;
+  }
 `;
 
 export const FeaturedDetails = styled.div`
+
   .featuredName {
     color: #fff;
     font-weight: bold;
@@ -89,8 +96,13 @@ export const FeaturedDetails = styled.div`
 
   .featuredSocialLink {
     ul {
+      display: block;
       text-align: center;
       list-style: none;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      overflow-x: visible;
+
       li {
         position: relative;
         bottom: -120px;
@@ -101,7 +113,6 @@ export const FeaturedDetails = styled.div`
         border-radius: 50%;
         line-height: 0.1;
         margin-left: -5px;
-
         &:nth-child(1) {
           transition: 1s;
         }
@@ -111,7 +122,7 @@ export const FeaturedDetails = styled.div`
         &:nth-child(3) {
           transition: 1.6s;
         }
-        i {
+        svg {
           font-size: 15px;
           color: #fff;
           animation-name: rotate-icon;

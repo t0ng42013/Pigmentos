@@ -59,7 +59,7 @@ export const ResourcesButtons = styled.ul`
     font-size: 1.3rem;
     line-height: 1rem;
     font-weight: 500;
-    width: 89px;
+    
     height: 40px;
     border-radius: 9999px;
     border: 2px solid #3c3c4c;

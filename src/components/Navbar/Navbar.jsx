@@ -4,7 +4,7 @@ import {  MenuDesktop, MenuDesktopLinks, MenuDesktopLinksBtns, MenuMobile, MenuM
 
 
 
-import  logo  from "/src/assets/logoPig2.png"
+
 import { Link } from "react-router-dom"
 import { useContext } from "react";
 import { MenuContext } from "../../context/MenuContext";
@@ -19,7 +19,7 @@ export const Navbar = () => {
     <header className="header">
       <Nav>
         <Link to="/">
-          <img src={logo} alt="logo" />
+          <img src="/assets/logoPig2.png" alt="logo" />
         </Link>
 
         <MenuDesktop>

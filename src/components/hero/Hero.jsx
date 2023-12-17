@@ -1,7 +1,5 @@
 import { HeroButton, HeroContainer, HeroForm, HeroHeader, HeroImageB, HeroImageR, HeroInput, HeroParagraph, HeroTitle } from "./HeroStyled";
 
-import fondo1 from "/src/assets/imgBgBlurRed.svg";
-import fondo2 from "/src/assets/imgBgBlurBlue.png";
 
 import { FaSearch } from "react-icons/fa";
 
@@ -11,10 +9,10 @@ export const Hero = () => {
   return (
     <HeroContainer>
       <HeroImageR>
-        <img src={fondo1} alt="" />
+        <img src="/assets/imgBgBlurRed.svg" alt="" />
       </HeroImageR>
       <HeroImageB>
-        <img src={fondo2} alt="" />
+        <img src="/assets/imgBgBlurBlue.png" alt="" />
       </HeroImageB>
       <HeroHeader>
         <HeroTitle>Explorar Todos Los Recursos</HeroTitle>

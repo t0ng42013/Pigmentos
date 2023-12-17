@@ -11,11 +11,12 @@ export const CartContainer = styled.div`
   right: ${({ isOpen }) =>
     isOpen
       ? "0"
-      : "-2000px"}; /* Cambia la posición dependiendo del estado */ /* Cambia la posición dependiendo del estado */
+      : "-100%"}; /* Cambia la posición dependiendo del estado */ /* Cambia la posición dependiendo del estado */
   z-index: 200;
-  display: flex;
+  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 
   hr {
     margin-top: 40px;
@@ -24,7 +25,11 @@ export const CartContainer = styled.div`
   }
 
   ul {
-    width: 100%;
+    width: 100%;;
+  }
+
+  li{
+    margin-bottom: 10px;
   }
 `;
 
@@ -47,7 +52,6 @@ export const CartItem = styled.li`
   padding: 8px 0;
   display: flex;
   align-items: center;
-  border: solid;
   width: 100%;
   gap: 8px;
   width: 100%;
@@ -70,6 +74,7 @@ export const CartItem = styled.li`
     font-size: 1.5rem;
     margin-left: auto;
     margin-right: 10px;
+    cursor: pointer;
   }
 `;
 
