@@ -71,4 +71,14 @@ footer{
 .overlay.active {
   display: block; /* Mostrar cuando está activo */
 }
+
+.input-error  {
+  border: 2px solid red !important ; /* Borde rojo para el input */
+  color: red; /* Texto rojo para el texto del input */
+}
+
+.error-message {
+  color: red; 
+  margin-top: 5px;
+}
 `;

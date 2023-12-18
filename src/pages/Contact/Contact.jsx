@@ -1,5 +1,9 @@
 import React from 'react'
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+
 import { ContactContainer, FormContainer, InfoBody, InfoContainer, InfoFigure, RedesContainer,Form } from './ContactStyled';
+
 import {
   FaFacebookF,
   FaInstagram,
@@ -11,12 +15,34 @@ import { FaPhone } from "react-icons/fa";
 
 import fotoContacto from '/assets/VM1RR0aKaPa38kv6ffcs1687062516.webp';
 
+  const validationSchema = Yup.object({
+    name: Yup.string().trim().required("Campo requerido"),
+    message: Yup.string().trim().max(255,'Maximo de 255 caracteres').required("Campo requerido"),
+    email: Yup.string().email('Correo invalido').required('Campo requerido'),
+  });
+
 export const Contact = () => {
+  const { getFieldProps, handleSubmit, errors, touched } = useFormik({
+    initialValues:{
+      name:'',
+      message:'',
+      email:'',
+    },
+    validationSchema,
+    onSubmit:(values, { resetForm })=>{
+      resetForm();
+    },
+  });
+
+
   return (
     <ContactContainer>
       <InfoContainer>
         <h2>Contáctenos</h2>
-        <p>Complete el formulario y nos comunicaremos con usted dentro de las 24 horas </p>
+        <p>
+          Complete el formulario y nos comunicaremos con usted dentro de las 24
+          horas{" "}
+        </p>
         <hr className="underLine" />
         <InfoBody>
           <div>
@@ -54,38 +80,49 @@ export const Contact = () => {
 
       <FormContainer>
         <div className="formBody">
-          <p >¿ Que estás buscando ?</p>
-          <Form action="">
-            <div>
-              <p >Full Name</p>
+          <p>¿ Que estás buscando ?</p>
+          <Form action="" onSubmit={handleSubmit}>
+            <div className="">
+              <p>Nombre</p>
               <input
+                name="name"
                 type="text"
                 placeholder="Full Name"
+                {...getFieldProps("name")}
+                className={touched.name && errors.name ? "input-error" : ""}
               />
+              {touched.name && errors.name && (
+                <div className="error-message">{errors.name}</div>
+              )}
             </div>
             <div>
-              <p >Email</p>
+              <p>Email</p>
               <input
-                className="w-full focus:outline-none border border-[#4D4D4D33]/20 rounded-lg bg-transparent mt-[10px]"
+                name="email"
                 type="email"
                 placeholder="Email"
+                {...getFieldProps("email")}
+                className={touched.email && errors.email ? "input-error" : ""}
               />
+              {touched.email && errors.email && (
+                <div className="error-message">{errors.email}</div>
+              )}
             </div>
             <div>
-              <p >Message</p>
+              <p>Message</p>
               <textarea
-                name=""
-                id=""
+                name="message"
                 cols="30"
                 rows="5"
                 placeholder="Message"
+                {...getFieldProps("message")}
+                className={touched.message && errors.message ? "input-error" : ""}
               ></textarea>
+              {touched.message && errors.message && (
+                <div className="error-message">{errors.message}</div>
+              )}
             </div>
-            <button
-              // type="submit"
-            >
-              Submit
-            </button>
+            <button type="submit">Submit</button>
           </Form>
         </div>
       </FormContainer>
