@@ -1,7 +1,9 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useReducer, useState} from "react";
+import { FilterReducer } from "../reducer/filterReducer.Jsx";
+import { FilterInitialState } from "../reducer/filterReducer.Jsx";
 
 
-const FilterContext = createContext();
+export const FilterContext = createContext();
 
 export const useFilter = () => {
   const context = useContext(FilterContext);
@@ -12,15 +14,19 @@ export const useFilter = () => {
 };
 
 export const FilterProvider = ({ children }) => {
-  const [filter, setFilter] = useState("todos"); 
+const [state, dispatch] = useReducer(FilterReducer,FilterInitialState)
+const [filtro, setFiltro] = useState(false)
 
-  const updateFilter = (newFilter) => {
-    setFilter(newFilter);
-  };
+
+const handleFiltro = () => {
+  setFiltro(!filtro);
+};
 
   const contextValue = {
-    filter,
-    updateFilter,
+    state,
+    dispatch,
+    handleFiltro,
+    filtro
   };
 
   return (

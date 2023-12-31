@@ -17,6 +17,7 @@ export const CartContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  overflow-y: auto;
 @media (min-width: 600px) {
   width: 400px;
 }

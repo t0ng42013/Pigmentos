@@ -15,7 +15,7 @@ export const products = [
     price: 129,
     description:
       "Agendas en general, organizadores, anotadores, libros de recetas, agendas para mamás, cuadernos especiales... 😊",
-    image: "assets/img/image2.jpg",
+    image: "/assets/img/image2.jpg",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const products = [
     category: "Papelería",
     price: 79,
     description: "Flyers, calcos y etiquetas para los productos! ❤",
-    image: "assets/img/image3.jpg",
+    image: "/assets/img/image3.jpg",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ export const products = [
     category: "Personalizados",
     price: 109,
     description: "Pedido de remeras personalizadas!",
-    image: "assets/img/image4.jpg",
+    image: "/assets/img/image4.jpg",
   },
   {
     id: 5,
@@ -40,7 +40,7 @@ export const products = [
     price: 49,
     description:
       "Invitaciones y souvenir para comunión, en papel telado... delicadísimo!",
-    image: "assets/img/image5.jpg",
+    image: "/assets/img/image5.jpg",
   },
   {
     id: 6,
@@ -48,7 +48,7 @@ export const products = [
     category: "Papelería",
     price: 199,
     description: "Detalles de las tesis cosidas en tapa dura 😊",
-    image: "assets/img/image6.jpg",
+    image: "/assets/img/image6.jpg",
   },
   {
     id: 7,
@@ -57,7 +57,7 @@ export const products = [
     price: 199,
     description:
       "Tarjetitas, turneros y recetarios!! Super necesario para cualquier profesional! 📋✏️",
-    image: "assets/img/image7.jpg",
+    image: "/assets/img/image7.jpg",
   },
   {
     id: 8,
@@ -65,7 +65,7 @@ export const products = [
     category: "Especiales",
     price: 299,
     description: "Productos especiales para empezar las clases con todo!!",
-    image: "assets/img/image8.jpg",
+    image: "/assets/img/image8.jpg",
   },
   {
     id: 9,
@@ -74,7 +74,7 @@ export const products = [
     price: 149,
     description:
       "Qué te parece regalarle algo especial a tu mejor amigo/a? Podés elegir la tarjeta que más te guste o personalizarla! Formato abierto 15x21cm. y 21x30cm.",
-    image: "assets/img/image9.jpg",
+    image: "/assets/img/image9.jpg",
   },
   {
     id: 10,
@@ -83,7 +83,7 @@ export const products = [
     price: 199,
     description:
       "Pines tipo prendedor medianos y grandes, para adornar tu mochila!",
-    image: "assets/img/image10.jpg",
+    image: "/assets/img/image10.jpg",
   },
   {
     id: 11,
@@ -92,7 +92,7 @@ export const products = [
     price: 499,
     description:
       "Contamos con varios modelos de almanaques, en distintos tamaños, ya sea como publicidad con el logo de tu empresa o con una foto en especial, para regalar 😊",
-    image: "assets/img/image11.jpg",
+    image: "/assets/img/image11.jpg",
   },
   {
     id: 12,
@@ -100,7 +100,7 @@ export const products = [
     category: "Papelería",
     price: 499,
     description: "Desarrollo y aplicación de gráfica en nuevo packaging 😊",
-    image: "assets/img/image12.jpg",
+    image: "/assets/img/image12.jpg",
   },
   {
     id: 13,
@@ -109,7 +109,7 @@ export const products = [
     price: 299,
     description:
       "Todavía no sabes que regalar en estas fiestas? Te damos algunas ideas originales para regalar... o regalarte! Calcos, cuadernos, agendas, tazas, imanes... recorré el álbum y chusmeá, cada foto tiene una pequeña descripción del producto!",
-    image: "assets/img/image13.jpg",
+    image: "/assets/img/image13.jpg",
   },
   {
     id: 14,
@@ -117,6 +117,6 @@ export const products = [
     category: "Especiales",
     price: 599,
     description: "Ya estamos listos ❤ nos vemos en la expo!",
-    image: "assets/img/image14.jpg",
+    image: "/assets/img/image14.jpg",
   },
 ];

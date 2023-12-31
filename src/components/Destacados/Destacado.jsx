@@ -4,21 +4,25 @@ import { FeaturedCard, FeaturedDetails } from "./DestacadosStyled";
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedin,
   FaTwitter,
 } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import { products } from "../../data/Products";
 
 export const Destacado = () => {
+ 
+  const getRandomObject = (product) => {
+    const randomIndex = Math.floor(Math.random() * product.length);
+    return product[randomIndex];
+  };
+ 
+  let productos = getRandomObject(products)
   return (
-    <>
-      <FeaturedCard>
+    <FeaturedCard>
+      <Link to={`/products/${productos.id}`}>
         <div className="featured">
           <div className="featuredImg">
-            <img
-              src="https://instagram.fcor10-3.fna.fbcdn.net/v/t39.30808-6/410247647_958685292396002_171554329259211626_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4yMDQ4eDIwNDguc2RyIn0&_nc_ht=instagram.fcor10-3.fna.fbcdn.net&_nc_cat=102&_nc_ohc=AmhXCY75yQYAX-RBIci&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzI1ODMwNjQ4MzEzNjg5NDI1Mw%3D%3D.2-ccb7-5&oh=00_AfCFBalOz8CJnPij00ivJtD_bJPc1LzJAfIKeqUREBVPSw&oe=6580EC1C&_nc_sid=ee9879"
-              className="img-fluid d-block m-auto"
-              alt="featured-image"
-            />
+            <img src={productos.image} alt="featured-image" />
           </div>
           <FeaturedDetails>
             <div className="featuredName">
@@ -57,7 +61,7 @@ export const Destacado = () => {
             </div>
           </FeaturedDetails>
         </div>
-      </FeaturedCard>
-    </>
+      </Link>
+    </FeaturedCard>
   );
 };

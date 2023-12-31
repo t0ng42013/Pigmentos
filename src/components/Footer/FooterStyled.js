@@ -8,7 +8,6 @@ export const FooterStyles = styled.footer`
   flex-wrap: wrap;
   gap: 1.25rem;
   margin-top: 2rem;
-  max-width: 1170px;
   margin: auto;
   padding: 2.5rem 0.75rem 0;
 

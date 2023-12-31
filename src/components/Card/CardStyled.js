@@ -1,73 +1,62 @@
 import styled from 'styled-components';
 
-export const CardContainer = styled.a`
-  display: block;
-  background: #2b2b3b;
-  border-radius: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  max-width: 370px;
-
-  img {
-    border-radius: 0.5rem 0.5rem 0 0;
-    width: 100%;
-    margin: auto;
-    display: block;
-    height: auto;
-    object-fit: cover;
-  }
-`;
-
-export const CardType = styled.div`
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
+export const CardContainer= styled.div`
   display: flex;
-  align-items: center;
-  column-gap: 10px;
-
-  div {
-    background: #3c70fe;
-    font-weight: bold;
-    width: 3rem;
-    height: 2.5rem;
-    border-radius: 0.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    color: white;
-    transition: transform 0.2s ease-out;
-    &:active {
-      background-color: #6b97ff;
-      transform: translateY(2px);
-    }
-  }
-`;
-
-export const CardBody = styled.figcaption`
-  padding: 1.25rem;
-  color: white;
-`;
-
-export const CardBodyTitle = styled.div`
-  display: flex;
+  flex-direction: column;
+  max-height: 365px;
   justify-content: space-between;
-  align-items: center;
+  text-align: center;
+  padding: 15px 13px;
+  margin-left: 0;
+  font-size: 0.875em;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: all 0.25s ease 0s;
+  min-width: 230px;
 
-  h6 {
-    font-weight: 600;
-    font-size: 1rem;
-    text-align: center;
+  position: relative;
+  width: 50%;
+  min-height: 1px;
+  box-shadow: inset 0 0 0 1px #444;
+  border: 2px solid transparent;
+
+  .pictures {
+    max-height: 50%;
+    max-width: 100%;
+    object-fit: cover;
+    display: inline-flex;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+
+  h2 {
+    padding-top: 20px;
+  }
+  
+  @media (min-width: 780px) {
+    flex: 0 0 25%;
+    max-width: 25%;
   }
 `;
 
-export const CardBodyParagraph = styled.p`
-  line-height: 22px;
-  font-size: 12px;
-  padding-top: 1.25rem;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+export const Price = styled.span`
+  display: block;
+  margin-bottom: 10px;
+  ins span {
+    color: orange;
+    font-size: 17px;
+    margin-right: 10px;
+  }
+
+  del {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+`;
+export const Amount = styled.span`
+  img {
+    width: 22px;
+    margin-right: 5px;
+  }
 `;

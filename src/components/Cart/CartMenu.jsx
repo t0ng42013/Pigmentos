@@ -1,30 +1,62 @@
 import React, { useContext } from "react";
-import { CartBody, CartBtnBuy, CartCleanBtn, CartContainer, CartItem } from "./CartMenuStyled";
+import {
+  CartBody,
+  CartBtnBuy,
+  CartCleanBtn,
+  CartContainer,
+  CartItem,
+} from "./CartMenuStyled";
 
 import { FaRegTrashCan } from "react-icons/fa6";
 import { MenuContext } from "../../context/MenuContext";
 import { useCart } from "../../context/CartContext";
+import Swal from "sweetalert2";
 
 import { CiFaceFrown } from "react-icons/ci";
 
 export const CartMenu = () => {
+  const { isCartOpen } = useContext(MenuContext);
+  const {
+    cartItems,
+    removeFromCart,
+    getTotalItems,
+    getSubTotal,
+    removeAllFromCart,
+  } = useCart();
 
-  const { isCartOpen } =  useContext(MenuContext);
-   const {
-     cartItems,
-     removeFromCart,
-     getTotalItems,
-     getSubTotal,
-     removeAllFromCart
-   } = useCart();
+  const handleRemoveFromCart = (itemId) => {
+    Swal.fire({
+      title: "¿Estás seguro de eliminar este producto?",
+      showCancelButton: true,
+      confirmButtonText: "Sí, eliminar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Acción cuando se confirma la eliminación
+        Swal.fire("¡Producto eliminado!", "", "success");
+        removeFromCart(itemId); // Llama a la función para eliminar el producto
+      }
+    });
+  };
 
-      const handleRemoveFromCart = (itemId) => {
-        removeFromCart(itemId);
-      };
+  const handleRemoveAll = () => {
+   
 
-      const handleRemoveAll = () => {
-        removeAllFromCart()
-      };
+       Swal.fire({
+         title: "¿Estás seguro de eliminar todo?",
+         showCancelButton: true,
+         confirmButtonText: "Sí, eliminar",
+         cancelButtonText: "Cancelar",
+         
+       }).then((result) => {
+         if (result.isConfirmed) {
+           // Acción cuando se confirma la eliminación
+           Swal.fire("¡Carrito Vacio!", "", "success");
+           removeAllFromCart();
+         }
+       });
+    
+  };
 
   return (
     <CartContainer isOpen={isCartOpen}>
@@ -63,12 +95,13 @@ export const CartMenu = () => {
         </div>
       </CartBody>
       <div>
-        <CartBtnBuy>Comprar</CartBtnBuy>
-        {
-          cartItems.length === 0 
-          ? ''
-          :<CartCleanBtn onClick={()=>handleRemoveAll()}>Vaciar</CartCleanBtn>
+        
+        {cartItems.length !== 0 && <CartBtnBuy>Comprar</CartBtnBuy>      
         }
+
+        {cartItems.length !== 0 &&  <CartCleanBtn onClick={() => handleRemoveAll()}>Vaciar</CartCleanBtn> }
+
+
       </div>
     </CartContainer>
   );

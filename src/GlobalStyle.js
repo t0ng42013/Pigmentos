@@ -81,4 +81,11 @@ footer{
   color: red; 
   margin-top: 5px;
 }
+@media (max-width: 580px) {
+   .swal2-popup {
+    width: 80% !important; /* Cambia el ancho del modal */
+    min-width: 320px;
+  }  
+}
+ 
 `;

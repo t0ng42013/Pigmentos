@@ -27,10 +27,10 @@ export const Hero = () => {
   return (
     <HeroContainer>
       <HeroImageR>
-        <img src="/assets/imgBgBlurRed.svg" alt="" />
+        <img src="/assets/imgBgBlurRed.svg"  />
       </HeroImageR>
       <HeroImageB>
-        <img src="/assets/imgBgBlurBlue.png" alt="" />
+        <img src="/assets/imgBgBlurBlue.png" />
       </HeroImageB>
       <HeroHeader>
         <HeroTitle>Explorar Todos Los Recursos</HeroTitle>
@@ -54,7 +54,7 @@ export const Hero = () => {
           {result.length > 0 ? (
             result.map((product) => (
               <div key={product.id}>
-                <Link to={`/product/${product.id}`}>
+                <Link to={`/products/${product.id}`}>
                   <p>{product.name}</p>
                 </Link>
               </div>

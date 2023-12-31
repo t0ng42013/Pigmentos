@@ -5,7 +5,6 @@ export const HeroContainer = styled.section`
  position: relative;
   width: 100%;
   background: #15151e;
-  max-width: 1170px;
   min-height: 350px;
   display: flex;
   justify-content: center;

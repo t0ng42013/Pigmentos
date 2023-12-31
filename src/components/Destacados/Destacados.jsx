@@ -10,6 +10,7 @@ export const Destacados = () => {
           <div className="row">
             <Destacado />
             <Destacado />
+            <Destacado />
             </div>
         </div>
       </FeaturedContainer>
