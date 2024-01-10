@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {
   ContainerImage,
   ContainerImageExample,
@@ -18,12 +18,21 @@ import { useCart } from "../../context/CartContext";
 
 
 export const Product = () => {
- const { toggleCart } = useContext(MenuContext);
-  const { addToCart } = useCart();
+
+  const { toggleCart } = useContext(MenuContext);
+  const { addToCart, quantityProd, setQuantityProd } = useCart();
 
   const handleAddToCart = (product) => {
     addToCart(product);
+   };
 
+   const handleQuantity = (e) => {
+     let valor = e.target.value;
+
+     if (valor <= 0) {
+       return;
+     }
+     setQuantityProd(valor);
    };
 
 const handleBuy = () => {
@@ -61,7 +70,7 @@ const handleBuy = () => {
           </ContainerImage>
           <ContainerImageExample>
             <Link>
-            <img src={selectedProduct.image} alt="foto 1" />
+              <img src={selectedProduct.image} alt="foto 1" />
             </Link>
             <img src={selectedProduct.image} alt="foto 2" />
             <img src={selectedProduct.image} alt="foto 3" />
@@ -72,7 +81,6 @@ const handleBuy = () => {
           <div className="titleCardInfo">
             <h1>{selectedProduct.name}</h1>
           </div>
-
 
           <p className="code">CÓDIGO: 10602301228</p>
 
@@ -91,12 +99,13 @@ const handleBuy = () => {
                 type="number"
                 size="4"
                 title="Cant"
-                value="1"
+                value={quantityProd}
                 name="quantity"
                 id="quantity-input"
+                onChange={handleQuantity}
               />
             </div>
-            <button onClick={()=>handleBuy()}>Comprar</button>
+            <button onClick={() => handleBuy()}>Comprar</button>
           </ProductCardContainer>
         </ProductContainerInfo>
 

@@ -10,6 +10,7 @@ export const ProductContainer = styled.div`
   @media(min-width: 992px){
     display: flex;
     flex-wrap: wrap;
+    min-height: 80vh;
   }
 `;
 

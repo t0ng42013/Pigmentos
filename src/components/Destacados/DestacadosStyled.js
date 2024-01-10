@@ -6,7 +6,6 @@ export const FeaturedContainer = styled.section`
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1170px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -27,6 +26,10 @@ export const FeaturedContainer = styled.section`
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 100px;
+    }
   }
 `;
 

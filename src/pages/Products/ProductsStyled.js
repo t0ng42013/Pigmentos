@@ -136,10 +136,8 @@ export const Sidebar = styled.div`
   & > :first-child{
     border: 2px solid #ececec;
     border-radius: 6px;
-    margin-bottom: 51px;
     color: white;
 
-   
   }
 
  
@@ -176,6 +174,7 @@ export const FilterCategory = styled.ul`
     margin:0;
     padding: 0.357em 0.29em 0.643em;
     
+    
 
     &:a {
       color: #2b2b2b;
@@ -191,11 +190,7 @@ export const FilterCategory = styled.ul`
       &:hover{
         color: orange;
         transition: all .3s
-      }
-
-      :last-child{
-        border: 2px solid  red;
-      }
+      }      
     }
   }
 

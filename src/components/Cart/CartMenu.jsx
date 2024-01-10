@@ -58,6 +58,20 @@ export const CartMenu = () => {
     
   };
 
+    const handleBuyNow = () => {
+      Swal.fire({
+        title: "¿Desea finalizar la compra?",
+        showCancelButton: true,
+        confirmButtonText: "Sí, finalizar compra",
+        cancelButtonText: "Cancelar",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire("¡Compra finalizada!", "", "success");
+          removeAllFromCart();
+        }
+      });
+    };
+
   return (
     <CartContainer isOpen={isCartOpen}>
       <ul id="menuShopUl">
@@ -74,7 +88,9 @@ export const CartMenu = () => {
               <img src={item.image} alt={item.name} />
               <div>
                 <span>{item.name}</span>
-                <span>1 x ${item.price}</span>
+                <span>
+                  {item.quantity} x ${item.price}
+                </span>
               </div>
               <FaRegTrashCan onClick={() => handleRemoveFromCart(item.id)} />
             </CartItem>
@@ -95,13 +111,13 @@ export const CartMenu = () => {
         </div>
       </CartBody>
       <div>
-        
-        {cartItems.length !== 0 && <CartBtnBuy>Comprar</CartBtnBuy>      
-        }
+        {cartItems.length !== 0 && (
+          <CartBtnBuy onClick={() => handleBuyNow()}>Comprar</CartBtnBuy>
+        )}
 
-        {cartItems.length !== 0 &&  <CartCleanBtn onClick={() => handleRemoveAll()}>Vaciar</CartCleanBtn> }
-
-
+        {cartItems.length !== 0 && (
+          <CartCleanBtn onClick={() => handleRemoveAll()}>Vaciar</CartCleanBtn>
+        )}
       </div>
     </CartContainer>
   );

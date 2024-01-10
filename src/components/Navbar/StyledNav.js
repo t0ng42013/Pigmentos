@@ -8,7 +8,6 @@ export const Nav = styled.nav`
   position: relative;
   z-index: 200;
   overflow: visible;
-  max-width: 1220px;
 
   a {
     color: white;
@@ -22,10 +21,13 @@ export const Nav = styled.nav`
       overflow: hidden;
       margin-right: 25px;
     }
+  }
 
-   
+  @media (min-width: 1024px) {
+    padding: 20px 45px;
   }
 `;
+
 export const MenuDesktop = styled.div`
   margin: auto;
   width: 100%;

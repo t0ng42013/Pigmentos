@@ -20,6 +20,7 @@ export const CartContainer = styled.div`
   overflow-y: auto;
 @media (min-width: 600px) {
   width: 400px;
+  padding: 20px;
 }
   hr {
     margin-top: 40px;

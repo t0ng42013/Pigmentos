@@ -2,13 +2,18 @@ import styled from 'styled-components';
 
 
 export const HeroContainer = styled.section`
- position: relative;
+  position: relative;
   width: 100%;
   background: #15151e;
   min-height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 1024px) {
+    padding: 100px 0;
+    margin-bottom: 100px;
+  }
 `;
 
 export const HeroFigure = styled.figure`

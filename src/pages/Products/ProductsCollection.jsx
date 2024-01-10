@@ -13,7 +13,6 @@ import { MdFilterAlt } from "react-icons/md";
 
 
 import {  useFilter } from "../../context/FilterContext";
-import { products } from "../../data/Products";
 
 export const ProductsCollection = () => {
 

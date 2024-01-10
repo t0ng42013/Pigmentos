@@ -6,13 +6,26 @@ export const CartContextProvider = ({ children }) => {
   const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
   const [cartItems, setCartItems] = useState(storedCartItems);
   
- const generateUniqueId = () => {
-   return Date.now().toString(); // Genera un ID único basado en la hora actual
- };
+  const [quantityProd, setQuantityProd] = useState(1);
+
+  
 
  const addToCart = (item) => {
-   const newItem = { ...item, id: generateUniqueId(), quantity: 1 };
-   setCartItems([...cartItems, newItem]);
+  const existingItemIndex = cartItems.findIndex(
+    (cartItem) => cartItem.id === item.id
+  );
+
+  if (existingItemIndex !== -1) {
+    // Si el producto ya está en el carrito, actualiza la cantidad
+    const updatedCartItems = [...cartItems];
+    updatedCartItems[existingItemIndex].quantity = quantityProd;
+    setCartItems(updatedCartItems);
+    
+  } else {
+    // Si el producto no está en el carrito, agrégalo con una cantidad inicial de 1
+    const newItem = { ...item, quantity: quantityProd };
+    setCartItems([...cartItems, newItem]);
+  }
  };
 
 const removeFromCart = (itemId) => {
@@ -25,11 +38,18 @@ const removeAllFromCart = () => {
 };
 
 const getTotalItems = () => {
-  return cartItems.reduce((total, item) => total + 1, 0);
+  const totalQuantity = cartItems.reduce(
+    (total, item) => total + parseInt(item.quantity),
+    0
+  );
+  return totalQuantity;
 };
 
   const getSubTotal = () => {
-    return cartItems.reduce((total, item) => total + item.price, 0);
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
   };
 
  useEffect(() => {
@@ -46,6 +66,8 @@ return (
       getTotalItems,
       getSubTotal,
       removeAllFromCart,
+      quantityProd,
+      setQuantityProd,
     }}
   >
     {children}

@@ -20,7 +20,7 @@ export const FooterStyles = styled.footer`
     font-size: 1.1rem;
     line-height: 32px;
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin: 0;
   }
 
   .footDeco{
@@ -29,6 +29,14 @@ export const FooterStyles = styled.footer`
     right: 0;
     z-index: -1;
   }
+   
+   @media (min-width: 1024px){
+      padding: 10px 45px;
+
+      p{
+        margin: 0;
+      }
+   }
 `;
 
 export const FootContainerRedes = styled.div`

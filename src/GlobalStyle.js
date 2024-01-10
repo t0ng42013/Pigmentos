@@ -30,7 +30,7 @@ img{
 header,
 main,
 footer{
-    max-width: 1220px;
+    max-width: 1550px;
     margin: auto;
 }
 
