@@ -151,6 +151,7 @@ export const Sidebar = styled.div`
     flex: 0 0 21.6666666667%;
     max-width: 21.6666666667%;
     order: 1;
+    overflow: hidden;
   }
 `;
 
