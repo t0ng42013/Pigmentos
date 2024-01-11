@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CardContainer= styled.div`
+export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-height: 365px;
@@ -29,11 +29,15 @@ export const CardContainer= styled.div`
     margin-bottom: 20px;
   }
 
-
   h2 {
     padding-top: 20px;
+    font-size: 16px;
+    line-height: 1.3;
+    letter-spacing: 0.161em;
+    font-weight: 500;
+    font-style: normal;
   }
-  
+
   @media (min-width: 780px) {
     flex: 0 0 25%;
     max-width: 25%;
