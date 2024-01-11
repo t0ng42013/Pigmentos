@@ -117,7 +117,6 @@ export const ContainerCollectionBtn = styled.button`
 
 
 export const Sidebar = styled.div`
-  background-color: #2b2b2b;
   position: fixed;
   top: 0;
  
@@ -152,6 +151,7 @@ export const Sidebar = styled.div`
     max-width: 21.6666666667%;
     order: 1;
     overflow: hidden;
+    margin-top: 150px;
   }
 `;
 

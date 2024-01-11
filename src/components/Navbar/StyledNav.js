@@ -17,14 +17,14 @@ export const Nav = styled.nav`
     align-items: center;
 
     img {
-      width: 110px;
+      width: 180px;
       overflow: hidden;
       margin-right: 25px;
     }
   }
 
   @media (min-width: 1024px) {
-    padding: 20px 45px;
+    padding: 20px 25px;
   }
 `;
 
@@ -54,7 +54,7 @@ export const MenuDesktopLinks = styled.ul`
       color: #fafafa;
       font-size: 1.1rem;
        &:hover{
-      color: gray;
+      color: orange;
     }
     }
    
