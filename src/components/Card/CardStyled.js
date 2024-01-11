@@ -12,6 +12,7 @@ export const CardContainer= styled.div`
   background-color: transparent;
   border-radius: 5px;
   transition: all 0.25s ease 0s;
+  min-width: 230px;
 
   position: relative;
   width: 50%;
