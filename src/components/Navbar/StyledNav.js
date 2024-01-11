@@ -19,7 +19,8 @@ export const Nav = styled.nav`
     font-family: "Montserrat", sans-serif;
 
     img {
-      width: 200px;
+      width: 360px;
+      min-width: 150px;
       overflow: hidden;
       margin-right: 25px;
     }

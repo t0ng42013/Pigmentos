@@ -52,7 +52,7 @@ export const products = [
   },
   {
     id: 7,
-    name: "Tarjetitas, recetarios y piezas para profesionales",
+    name: "Piezas para profesionales",
     category: "Papelería",
     price: 199,
     description:

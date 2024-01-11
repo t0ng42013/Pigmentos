@@ -24,7 +24,7 @@ export const ContainerCollectionPrimary = styled(ContainerCollection)`
     flex: 0 0 78.3333333333%;
     max-width: 78.3333333333%;
     order: 2;
-    padding: 15px 13px;
+    padding: 0px 13px;
     align-content: start;
     
   }
@@ -76,8 +76,10 @@ export const ContainerCollectionNav = styled.nav`
   @media (min-width: 768px) {
     background: transparent;
     h1 {
-      text-align: start;
+      text-align: center;
       margin-left: 20px;
+      font-size: 2rem;
+      letter-spacing: 0.17em;
     }
   }
 `;
@@ -120,7 +122,7 @@ export const Sidebar = styled.div`
   position: fixed;
   top: 0;
   background-color: #181818;
-  box-shadow: 0 0 17px -1px rgba(0, 0, 0, 0.66); /* solo activo*/
+ 
   width: 288px;
   height: 100%;
   transition: left 0.2s;
@@ -129,7 +131,6 @@ export const Sidebar = styled.div`
   z-index: 100000000;
   display: block !important;
   padding: 20px 15px;
-  border: 1px  solid #444;
   border-radius: 4px;
 
   & > :first-child{
@@ -148,9 +149,8 @@ export const Sidebar = styled.div`
     min-height: 1px;
     flex: 0 0 21.6666666667%;
     max-width: 21.6666666667%;
-    order: 1;
     overflow: hidden;
-    margin-top: 150px;
+    margin-top: 115px;
     background-color: transparent ;
   }
 `;
