@@ -1,24 +1,10 @@
 import React from "react";
 import { Amount, CardContainer, Price } from "./CardStyled";
 
-import { FaCartPlus } from "react-icons/fa";
-import { useCart } from "../../context/CartContext";
-import Swal from "sweetalert2";
+
 import { Link } from "react-router-dom";
 
 export const Card = ({ producto }) => {
-  const { addToCart } = useCart();
-
-  const handleAddToCart = (product) => {
-    addToCart(product);
-
-    Swal.fire({
-      title: "¡Producto agregado!",
-      text: `Has añadido ${product.name} al carrito.`,
-      icon: "success",
-      confirmButtonText: "Ok",
-    });
-  };
 
   return (
     <CardContainer>

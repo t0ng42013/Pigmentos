@@ -4,7 +4,7 @@ export const ContainerCollection = styled.section`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  
+  justify-content: center;
 `;
 
 export const ContainerCollectionPrimary = styled(ContainerCollection)`
@@ -119,7 +119,7 @@ export const ContainerCollectionBtn = styled.button`
 export const Sidebar = styled.div`
   position: fixed;
   top: 0;
- 
+  background-color: #181818;
   box-shadow: 0 0 17px -1px rgba(0, 0, 0, 0.66); /* solo activo*/
   width: 288px;
   height: 100%;
@@ -136,7 +136,6 @@ export const Sidebar = styled.div`
     border: 2px solid #ececec;
     border-radius: 6px;
     color: white;
-
   }
 
  
@@ -152,6 +151,7 @@ export const Sidebar = styled.div`
     order: 1;
     overflow: hidden;
     margin-top: 150px;
+    background-color: transparent ;
   }
 `;
 
