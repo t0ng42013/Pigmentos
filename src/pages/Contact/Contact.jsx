@@ -14,6 +14,7 @@ import { FaMailBulk } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 
 import fotoContacto from '/assets/VM1RR0aKaPa38kv6ffcs1687062516.webp';
+import Swal from 'sweetalert2';
 
   const validationSchema = Yup.object({
     name: Yup.string().trim().required("Campo requerido"),
@@ -30,7 +31,14 @@ export const Contact = () => {
     },
     validationSchema,
     onSubmit:(values, { resetForm })=>{
+      Swal.fire({
+        title: "Mensaje",
+        text: "enviado con exito",
+        icon: "success",
+      });
       resetForm();
+     
+
     },
   });
 
@@ -122,8 +130,8 @@ export const Contact = () => {
                 <div className="error-message">{errors.message}</div>
               )}
             </div>
-            <button type="submit">Submit</button>
-          </Form>
+            <button type="submit">Enviar</button>
+          </Form> 
         </div>
       </FormContainer>
     </ContactContainer>

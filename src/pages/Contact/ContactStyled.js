@@ -172,5 +172,6 @@ export const Form = styled.form`
     background-color: #026cfa;
     border: none;
     margin-top: 20px;
+    cursor: pointer;
   }
 `;
