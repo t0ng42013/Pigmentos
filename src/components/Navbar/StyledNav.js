@@ -16,8 +16,10 @@ export const Nav = styled.nav`
     justify-content: center;
     align-items: center;
 
+    font-family: "Montserrat", sans-serif;
+
     img {
-      width: 180px;
+      width: 200px;
       overflow: hidden;
       margin-right: 25px;
     }

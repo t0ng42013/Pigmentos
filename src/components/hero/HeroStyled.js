@@ -49,6 +49,8 @@ export const HeroTitle = styled.h2`
   text-align: center;
   max-width: 700px;
   margin: auto;
+  
+font-family: 'Montserrat', sans-serif;
 `;
 
 export const HeroParagraph = styled.p`

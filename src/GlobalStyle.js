@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Albert+Sans:ital,wght@1,300 & family= Montserrat:wght@300;400;600;700;800 & display= intercambio');
 
 *{
 margin: 0;
@@ -11,12 +11,12 @@ padding: 0;
 box-sizing: border-box;
 list-style: none;
 text-decoration: none;
-font-family: 'Albert Sans', sans-serif;
 color: #fafafa;
 }
 
 body{
 background-color: #15151e;
+
 }
 
 button{
